@@ -1,0 +1,368 @@
+:root {
+  --col-noir: #000;
+  --col-blanc: #fff;
+  --night-fond: #0e1823;
+  --col-orange: #f38806;
+  --col-rouge: #ff0000;
+  --col-gris: #ccc;
+  --col-light-org: #fece8c;
+  --col-light-gray: #eee;
+  --night-text: #7f8d9c;
+  --night-sombre: #252e38;
+}
+
+/** GENERAL **/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "product sans", "mont", "raleway", sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/** LANDING PAGE **/
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  position: fixed;
+  cursor: pointer;
+  right: 35px;
+  top: 35px;
+  color: var(--col-noir);
+  transform: scale(1);
+  font-size: 20px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.search .logo img {
+  width: 350px;
+}
+
+.texte {
+  position: relative;
+  height: 36px;
+  cursor: pointer !important;
+}
+
+.texte input {
+  width: 340px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 2px #eee;
+  padding: 0 25px !important;
+  font-weight: bold;
+  font-family: monospace;
+  color: #333 !important;
+}
+
+.texte #intuitive {
+  position: absolute;
+  right: 12spx;
+  width: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: crosshair;
+}
+
+.texte #google-logo {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  cursor: pointer;
+}
+
+.texte #google-logo:hover {
+  top: 25%;
+  transform: scale(1.01);
+}
+
+input[type="text"]:focus {
+  outline: none; /** Retire le cadre bleu par defaut **/
+}
+
+/*
+
+.sectors{
+    padding: 5px 0;
+    position: absolute;
+    bottom: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    min-width: 300px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 0;
+    list-style: none;
+    font-family: 'product sans';
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.sectors .domain{
+   width: 100%;
+   padding: 15px 5px;
+   cursor: pointer;
+}
+*/
+
+.sectors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: auto;
+  position: absolute !important;
+  bottom: 0%;
+  width: 1100px;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 0 20px !important;
+  height: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14.5%;
+}
+.sectors::-webkit-scrollbar {
+  display: none;
+}
+
+.sectors:hover {
+  height: 500px;
+  bottom: 0;
+}
+
+.sectors .glyphicon {
+  font-size: 22px;
+}
+
+.sectors .card {
+  position: relative;
+  height: 200px !important;
+  margin: 15px !important;
+  top: -70px;
+}
+
+.sectors .card:last-child {
+  right: 0px;
+  margin-right: 50px !important;
+}
+
+.sectors .card:hover {
+  height: 500px;
+}
+
+.sectors .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+  display: flex;
+  cursor: crosshair;
+}
+
+.sectors .card .face.face1 {
+  position: relative;
+  background: #fff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  transition: ease-in 0.5s;
+}
+
+.sectors .card:hover .face.face1 {
+  background: rgba(255, 0, 0, 0.7);
+  transform: translateY(0);
+}
+
+.sectors .card .face.face1 .content {
+  opacity: 0.8;
+  transition: 0.5s;
+  color: #ff0000;
+}
+
+.sectors .card:hover .face.face1 .content {
+  opacity: 1;
+  color: #fff;
+}
+
+.sectors .card .face.face1 .content span {
+  max-width: 100px;
+}
+
+.sectors .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.sectors .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100px);
+  transition: ease-in 0.5s;
+}
+
+.sectors .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.sectors .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+
+.sectors .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+.sectors .card .face.face2 .content a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/*
+.sectors .domain{
+    min-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background: var(--col-blanc);
+    border-radius: 5px;
+    transition: ease-in 0.5s;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #f3f3f3;
+    border: 1px solid #f3f3f3;
+}
+
+.sectors .domain:hover{
+    transform: scale(1.1);
+}
+
+
+.sectors .domain:nth-child(2n){
+    background: #f8f8f8;
+}
+
+.sectors .domain:nth-child(2n):hover{
+    background: var(--col-rouge);
+}
+
+.sectors .domain:hover{
+    background: var(--col-light-org);
+}
+*/
+
+#copyright {
+  position: fixed;
+  bottom: 1%;
+  right: 5%;
+}
+
+#copyright a {
+  text-decoration: none;
+  background: #f1f1f1;
+  padding: 5px 15px;
+  border-radius: 50px;
+  transition: ease-in 0.5s;
+}
+
+#copyright a:hover {
+  background: #337cbc;
+  color: #f1f1f1;
+}
+
+/** TABLETTE **/
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .back {
+    position: absolute !important;
+    width: 90%;
+    height: 90vh;
+    top: 0;
+    left: 0;
+  }
+
+  .search .logo {
+    display: none;
+  }
+
+  #menu {
+    position: absolute;
+    right: 5%;
+  }
+
+  .face .content {
+    top: -15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .face .content .logo img {
+    width: 70vw;
+  }
+
+  .face .content .texte input {
+    position: relative;
+    width: 90vw;
+  }
+
+  .sectors {
+    position: absolute !important;
+    top: 25%;
+  }
+}

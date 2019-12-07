@@ -130,7 +130,7 @@ const NavigationAuth = () => (
                 </ul>
                 <ul className="nav navbar-nav menu_list">
                     <li data-tip="Actualités" data-toggle="tooltip" data-placement="right">
-                        <Link to={ROUTES.LANDING} className="btn_menu">
+                        <Link to={ROUTES.ACTUALITE} className="btn_menu">
                             <img src="Assets/icones/icone1.svg" width="35" alt="A" />
                         </Link>
                     </li>
