@@ -1,0 +1,160 @@
+:root {
+  --col-noir: #000;
+  --col-blanc: #fff;
+  --night-fond: #0e1823;
+  --col-orange: #f38806;
+  --col-rouge: #ff0000;
+  --col-gris: #ccc;
+  --col-light-org: #fece8c;
+  --col-light-gray: #eee;
+  --night-text: #7f8d9c;
+  --night-sombre: #252e38;
+}
+
+/** GENERAL **/
+
+body {
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "product sans", "mont", "raleway", sans-serif !important;
+}
+
+/** LANDING PAGE **/
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  position: fixed;
+  cursor: pointer;
+  right: 35px;
+  top: 35px;
+  color: var(--col-noir);
+  transform: scale(1);
+  font-size: 20px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.search .logo img {
+  width: 350px;
+}
+
+.texte {
+  position: relative;
+  height: 36px;
+}
+
+.texte input {
+  width: 340px !important;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 2px #eee;
+  padding: 0 20px;
+  font-weight: bold;
+  font-family: monospace;
+  color: #f1f1f1;
+}
+
+.texte #intuitive {
+  position: absolute;
+  right: 15px;
+  width: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: crosshair;
+}
+
+.texte #google-logo {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+}
+
+.texte #google-logo:hover {
+  top: 18%;
+  left: 47%;
+  transform: scale(1.01);
+}
+
+input[type="text"]:focus {
+  outline: none; /** Retire le cadre bleu par defaut **/
+}
+
+#copyright {
+  position: fixed;
+  bottom: 1%;
+  right: 5%;
+}
+
+#copyright a {
+  text-decoration: none;
+  background-color: #f1f1f1;
+  color: #337cbc;
+  padding: 5px 15px;
+  border-radius: 50px;
+  transition: ease-in 0.5s;
+  cursor: pointer;
+}
+
+#copyright a:hover {
+  background: #337cbc;
+  color: #f1f1f1;
+}
+
+/** TABLETTE **/
+@media only screen and (max-width: 768px) {
+  .back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #menu {
+    position: absolute;
+    right: 5%;
+  }
+
+  .content {
+    top: -15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .content .logo img {
+    width: 70vw;
+  }
+
+  .content .texte input {
+    position: relative;
+    width: 90vw;
+  }
+
+  .sectors {
+    position: absolute !important;
+    bottom: 10px;
+  }
+}

@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 import * as ROUTES from '../../constants/routes';
-import { authUserContext } from '../Session';
-
-import { withFirebase } from '../Firebase';
 import Navigation from '../Navigation';
 
 import LandingPage from '../Landing';
@@ -14,6 +11,14 @@ import SignInPage from '../SignIn';
 import SignUpPage from '../SignUp';
 import AdminPage from '../Admin';
 import PassForgetPage from '../PasswordForget';
+import NewsPage from '../../Packages/NewsPage';
+import ArticlePage from '../../Packages/ArticlePage';
+import Dashboard from '../../Packages/Dashboard';
+import Maps from '../../Packages/Maps';
+import Messagerie from '../../Packages/Messagerie';
+import SignPage from '../../Packages/SignPage';
+import StorePage from '../../Packages/StorePage';
+import CartPage from '../../Packages/CartPage';
 import { withAuthentification } from '../Session';
 
 const App = () => (
@@ -27,6 +32,15 @@ const App = () => (
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
         <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
+
+        <Route path={ROUTES.ACTUALITE} component={NewsPage} />
+        <Route path={ROUTES.ARTICLE} component={ArticlePage} />
+        <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+        <Route path={ROUTES.MAPS} component={Maps} />
+        <Route path={ROUTES.SIGN} component={SignPage} />
+        <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
+        <Route path={ROUTES.STORE} component={StorePage} />
+        <Route path={ROUTES.PANIER} component={CartPage} />
 
     </Switch>
 );

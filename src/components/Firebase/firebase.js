@@ -4,15 +4,15 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: "AIzaSyB4LamnCRSVZAowrydogcfzbEyFxheHWT8",
-    authDomain: "producthuntpro.firebaseapp.com",
-    databaseURL: "https://producthuntpro.firebaseio.com",
-    projectId: "producthuntpro",
-    storageBucket: "producthuntpro.appspot.com",
-    messagingSenderId: "263826765321",
-    appId: "1:263826765321:web:4266ac0256f097017d2ad8",
-    measurementId: "G-P3SLZ8H0V8"
-};
+    apiKey: "AIzaSyDFw9t9RvivPa7IYxpaYfi-JW_zRCS1bLo",
+    authDomain: "makissy-b2e19.firebaseapp.com",
+    databaseURL: "https://makissy-b2e19.firebaseio.com",
+    projectId: "makissy-b2e19",
+    storageBucket: "makissy-b2e19.appspot.com",
+    messagingSenderId: "1073914991900",
+    appId: "1:1073914991900:web:bb8d871645413c9fe796d9",
+    measurementId: "G-R0FQLMWNB5"
+  };
 
 // const config = {
 //     apiKey: process.env.REACT_APP_API_KEY,
